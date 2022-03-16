@@ -13,7 +13,6 @@ import PaletteIcon from "@mui/icons-material/Palette";
 import { Avatar, Badge, Button, Typography } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import { DiMaterializecss } from "react-icons/di";
-// DiMaterializecss;
 import {
   Search,
   SearchIconWrapper,
@@ -28,7 +27,6 @@ import TemporaryDrawer from "../../Components/DrawerSetColor";
 const drawerWidth = 270;
 
 export default function Layout(props) {
-  const window = props.window || undefined;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -88,8 +86,6 @@ export default function Layout(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
   return (
     <Box sx={{ display: "flex", minHeight: "100vh" }}>
       <CssBaseline />
@@ -152,7 +148,7 @@ export default function Layout(props) {
         aria-label="mailbox folders"
       >
         <Drawer
-          container={container}
+          // container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
