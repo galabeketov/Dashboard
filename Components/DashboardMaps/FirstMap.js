@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-// import { DotMap, registerImages } from "@ant-design/maps";
+import { DotMap, registerImages } from "@ant-design/maps";
 
 const DemoDotMap = () => {
   const [data, setData] = useState({
@@ -63,7 +63,7 @@ const DemoDotMap = () => {
         "https://gw.alipayobjects.com/zos/antfincdn/pgo8%261emOy/guangdayinhang.png",
     },
   ];
-  // registerImages(images);
+  registerImages(images);
   const config = {
     map: {
       type: "mapbox",
@@ -90,8 +90,7 @@ const DemoDotMap = () => {
     },
   };
 
-  // return <DotMap {...config} />;
-  return <h1>123456</h1>;
+  return <DotMap {...config} />;
 };
 
 export default DemoDotMap;

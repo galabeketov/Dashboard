@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-// import { DotMap } from "@ant-design/maps";
+import { DotMap } from "@ant-design/maps";
 
 const WorldMap = () => {
   const [data, setData] = useState({ type: "FeatureCollection", features: [] });
@@ -65,7 +65,6 @@ const WorldMap = () => {
     },
   };
 
-  // return <DotMap {...config} />;
-  return <h1>123456</h1>;
+  return <DotMap {...config} />;
 };
 export default WorldMap;
